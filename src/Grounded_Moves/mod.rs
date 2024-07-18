@@ -12,6 +12,7 @@ use {
 
 mod Attack13;
 mod AttackHi3;
+mod AttackDash;
 mod AttackHi4;
 mod AttackLw4;
 mod AttackS3;
@@ -24,4 +25,5 @@ pub fn install() {
     AttackS4::install();
     AttackHi4::install();
     AttackLw4::install();
+    AttackDash::install();
 }

@@ -10,46 +10,56 @@ use {
     smashline::{Priority::*, *},
 };
 
-unsafe extern "C" fn effect_attackairn_limit(agent: &mut L2CAgentBase) {
-    frame(agent.lua_state_agent, 5.0);
+unsafe extern "C" fn effect_attackdash_limit(agent: &mut L2CAgentBase) {
+    frame(agent.lua_state_agent, 7.0);
+    if macros::is_excute(agent) {
+        macros::FOOT_EFFECT(
+            agent,
+            Hash40::new("sys_dash_smoke"),
+            Hash40::new("top"),
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            false,
+        );
+    }
+    frame(agent.lua_state_agent, 8.0);
+    if macros::is_excute(agent) {
+        agent.clear_lua_stack();
+        lua_args!(
+            agent,
+            Hash40::new("cloud_speedline"),
+            Hash40::new("top"),
+            0,
+            7,
+            0,
+            0,
+            0,
+            0,
+            0.8,
+            true,
+            0.627,
+            1,
+            0.674
+        );
+    }
+    frame(agent.lua_state_agent, 9.0);
     if macros::is_excute(agent) {
         if WorkModule::is_flag(
             agent.module_accessor,
             *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
         ) {
-            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.2);
-            macros::AFTER_IMAGE4_ON_arg29(
-                agent,
-                Hash40::new("tex_cloud_sword1_blue"),
-                Hash40::new("tex_cloud_sword2"),
-                7,
-                Hash40::new("haver"),
-                0,
-                1.5,
-                -1.2,
-                Hash40::new("haver"),
-                0,
-                20.5,
-                -1.2,
-                true,
-                Hash40::new("null"),
-                Hash40::new("haver"),
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                *EFFECT_AXIS_X,
-                0,
-                *TRAIL_BLEND_ALPHA,
-                101,
-                *TRAIL_CULL_NONE,
-                1.4,
-                0.1,
-            );
+            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.3);
         } else {
             macros::EFFECT_FOLLOW_WORK(
                 agent,
@@ -64,44 +74,129 @@ unsafe extern "C" fn effect_attackairn_limit(agent: &mut L2CAgentBase) {
                 1,
                 true,
             );
-            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.2);
-            macros::AFTER_IMAGE4_ON_arg29(
+            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.3);
+        }
+    }
+    frame(agent.lua_state_agent, 9.0);
+    if macros::is_excute(agent) {
+        if WorkModule::is_flag(
+            agent.module_accessor,
+            *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
+        ) {
+            macros::EFFECT_FOLLOW(
                 agent,
-                Hash40::new("tex_cloud_sword1"),
-                Hash40::new("tex_cloud_sword2"),
-                7,
-                Hash40::new("haver"),
-                0,
+                Hash40::new("cloud_dash_slash_limit"),
+                Hash40::new("top"),
                 1.5,
-                -1.2,
-                Hash40::new("haver"),
-                0,
-                20.5,
-                -1.2,
-                true,
-                Hash40::new("null"),
-                Hash40::new("haver"),
-                0,
-                0,
-                0,
+                1.5,
+                6,
                 0,
                 0,
                 0,
                 1,
+                true,
+            );
+            macros::FOOT_EFFECT(
+                agent,
+                Hash40::new("sys_run_smoke"),
+                Hash40::new("top"),
+                8,
                 0,
-                *EFFECT_AXIS_X,
                 0,
-                *TRAIL_BLEND_ALPHA,
-                101,
-                *TRAIL_CULL_NONE,
-                1.4,
-                0.1,
+                0,
+                0,
+                0,
+                0.9,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                false,
+            );
+        } else {
+            macros::EFFECT_FOLLOW(
+                agent,
+                Hash40::new("cloud_dash_slash"),
+                Hash40::new("top"),
+                1.5,
+                1.5,
+                6,
+                0,
+                0,
+                0,
+                1,
+                true,
+            );
+            macros::FOOT_EFFECT(
+                agent,
+                Hash40::new("sys_run_smoke"),
+                Hash40::new("top"),
+                8,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0.9,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                false,
             );
         }
     }
-    frame(agent.lua_state_agent, 18.0);
+    frame(agent.lua_state_agent, 12.0);
     if macros::is_excute(agent) {
-        macros::AFTER_IMAGE_OFF(agent, 4);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("cloud_speedline"), false, true);
+    }
+    frame(agent.lua_state_agent, 13.0);
+    if macros::is_excute(agent) {
+        macros::LANDING_EFFECT(
+            agent,
+            Hash40::new("sys_run_smoke"),
+            Hash40::new("top"),
+            8,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            false,
+        );
+    }
+    frame(agent.lua_state_agent, 16.0);
+    if macros::is_excute(agent) {
+        macros::FOOT_EFFECT(
+            agent,
+            Hash40::new("sys_run_smoke"),
+            Hash40::new("top"),
+            8,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            false,
+        );
     }
     frame(agent.lua_state_agent, 19.0);
     if macros::is_excute(agent) {
@@ -116,6 +211,6 @@ unsafe extern "C" fn effect_attackairn_limit(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("cloud")
-        .effect_acmd("effect_airattackn_limit", effect_airattackn, Priority::Low)
+        .effect_acmd("effect_attackdash", effect_attackdash_limit, Priority::Low)
         .install();
 }

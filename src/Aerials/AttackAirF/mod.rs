@@ -57,19 +57,38 @@ unsafe extern "C" fn effect_attackairf_limit(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 17.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_FOLLOW(
-            agent,
-            Hash40::new("cloud_airf_slash"),
-            Hash40::new("top"),
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            true,
-        );
+        if WorkModule::is_flag(
+            agent.module_accessor,
+            *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
+        ) {
+            macros::EFFECT_FOLLOW(
+                agent,
+                Hash40::new("cloud_airf_slash_limit"),
+                Hash40::new("top"),
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                true,
+            );
+        } else {
+            macros::EFFECT_FOLLOW(
+                agent,
+                Hash40::new("cloud_airf_slash"),
+                Hash40::new("top"),
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                true,
+            );
+        }
     }
     frame(agent.lua_state_agent, 21.0);
     frame(agent.lua_state_agent, 25.0);

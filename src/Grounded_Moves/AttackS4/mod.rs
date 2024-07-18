@@ -41,7 +41,7 @@ unsafe extern "C" fn effect_attacks4_limit(agent: &mut L2CAgentBase) {
             macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.5);
             macros::EFFECT_FOLLOW(
                 agent,
-                Hash40::new("cloud_smash_slash"),
+                Hash40::new("cloud_smash_slash_limit"),
                 Hash40::new("top"),
                 0,
                 0,
