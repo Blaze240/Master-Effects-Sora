@@ -1,6 +1,2 @@
-# lily-srs-template
-#### A blank template for creating SSBU code mods
-
-Clone standard SL2 template: `git clone https://github.com/LilyLavender/lily-srs-template`
-
-Clone legacy SL1 template: `git clone https://github.com/LilyLavender/lily-srs-template -b sl1`
+# Limit Switch Cloud/EX Mode Cloud
+Skyline plugin that modifies Cloud's effects while in Limit Break form as well as swapping his weapon in Limit Break. Also replaces his weapon during Final Smash. Inspired by Cloud's EX Mode in Dissidia Final Fantasy.
