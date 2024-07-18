@@ -13,9 +13,13 @@
     clippy::borrow_interior_mutable_const
 )]
 
-mod EDIT;
+mod Ultima_Weapon_Switch;
+mod Aerials;
+mod Grounded_Moves;
 
-#[skyline::main(name = "smashline_test")]
+#[skyline::main(name = "cloud_limit_switch")]
 pub fn main() {
-    EDIT::install();
+    Ultima_Weapon_Switch::install();
+	Aerials::install();
+	Grounded_Moves::install();
 }
