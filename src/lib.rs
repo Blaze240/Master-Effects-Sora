@@ -16,10 +16,15 @@
 mod Ultima_Weapon_Switch;
 mod Aerials;
 mod Grounded_Moves;
+mod Special_Limit;
+mod SpecialAir_Limit;
 
 #[skyline::main(name = "cloud_limit_switch")]
 pub fn main() {
     Ultima_Weapon_Switch::install();
 	Aerials::install();
 	Grounded_Moves::install();
+	Special_Limit::install();
+	SpecialAir_Limit::install();
+
 }
