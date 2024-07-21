@@ -10,7 +10,7 @@ use {
     smashline::{Priority::*, *},
 };
 
-unsafe extern "C" fn effect_attack13_limit(agent: &mut L2CAgentBase) {
+unsafe extern "C" fn effect_attack13_fusion(agent: &mut L2CAgentBase) {
     frame(agent.lua_state_agent, 3.0);
     if macros::is_excute(agent) {
         macros::EFFECT_OFF_KIND(agent, Hash40::new("sys_attack_arc_b"), true, true);
@@ -127,6 +127,6 @@ unsafe extern "C" fn effect_attack13_limit(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("cloud")
-        .effect_acmd("effect_attack13_limit", effect_attack13_limit, Priority::Low)
+        .effect_acmd("effect_attack13_fusion", effect_attack13_fusion, Priority::Low)
         .install();
 }

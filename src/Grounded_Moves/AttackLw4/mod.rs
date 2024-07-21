@@ -10,7 +10,7 @@ use {
     smashline::{Priority::*, *},
 };
 
-unsafe extern "C" fn effect_attacklw4_limit(agent: &mut L2CAgentBase) {
+unsafe extern "C" fn effect_attacklw4_fusion(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT(
             agent,
@@ -179,6 +179,6 @@ unsafe extern "C" fn effect_attacklw4_limit(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("cloud")
-        .effect_acmd("effect_attacklw4_limit", effect_attacklw4_limit, Priority::Low)
+        .effect_acmd("effect_attacklw4_fusion", effect_attacklw4_fusion, Priority::Low)
         .install();
 }

@@ -10,7 +10,7 @@ use {
     smashline::{Priority::*, *},
 };
 
-unsafe extern "C" fn effect_attackhi3_limit(agent: &mut L2CAgentBase) {
+unsafe extern "C" fn effect_attackhi3_fusion(agent: &mut L2CAgentBase) {
     frame(agent.lua_state_agent, 5.0);
     if macros::is_excute(agent) {
         if WorkModule::is_flag(
@@ -126,6 +126,6 @@ unsafe extern "C" fn effect_attackhi3_limit(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("cloud")
-        .effect_acmd("effect_attackhi3_limit", effect_attackhi3_limit, Priority::Low)
+        .effect_acmd("effect_attackhi3_fusion", effect_attackhi3_fusion, Priority::Low)
         .install();
 }

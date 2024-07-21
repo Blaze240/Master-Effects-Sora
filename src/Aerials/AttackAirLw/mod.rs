@@ -10,7 +10,7 @@ use {
     smashline::{Priority::*, *},
 };
 
-unsafe extern "C" fn effect_attackairlw_limit(agent: &mut L2CAgentBase) {
+unsafe extern "C" fn effect_attackairlw_fusion(agent: &mut L2CAgentBase) {
     frame(agent.lua_state_agent, 2.0);
     if macros::is_excute(agent) {
         macros::EFFECT(
@@ -91,8 +91,8 @@ unsafe extern "C" fn effect_attackairlw_limit(agent: &mut L2CAgentBase) {
 pub fn install() {
     Agent::new("cloud")
         .effect_acmd(
-            "effect_attackairlw_limit",
-            effect_attackairlw_limit,
+            "effect_attackairlw_fusion",
+            effect_attackairlw_fusion,
             Priority::Low,
         )
         .install();

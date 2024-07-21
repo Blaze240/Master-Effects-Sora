@@ -10,7 +10,7 @@ use {
     smashline::{Priority::*, *},
 };
 
-unsafe extern "C" fn ultima_weapon_switch(agent: &mut L2CFighterCommon) {
+unsafe extern "C" fn fusion_sword_switch(agent: &mut L2CFighterCommon) {
     unsafe {
         if  WorkModule::get_int(agent.module_accessor, *FIGHTER_INSTANCE_WORK_ID_INT_COLOR) % 2 == 0 {
             if WorkModule::is_flag(
@@ -72,6 +72,6 @@ unsafe extern "C" fn ultima_weapon_switch(agent: &mut L2CFighterCommon) {
 
 pub fn install() {
     Agent::new("cloud")
-        .on_line(Main, ultima_weapon_switch)
+        .on_line(Main, fusion_sword_switch)
         .install();
 }
