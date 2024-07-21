@@ -139,6 +139,6 @@ unsafe extern "C" fn effect_attack13_limit(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("cloud")
-        .effect_acmd("effect_attack13", effect_attack13_limit, Priority::Low)
+        .effect_acmd("effect_attack13_limit", effect_attack13_limit, Priority::Low)
         .install();
 }

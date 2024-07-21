@@ -42,7 +42,7 @@ unsafe extern "C" fn effect_specialairhi_lb_limit(agent: &mut L2CAgentBase) {
 pub fn install() {
     Agent::new("cloud")
         .effect_acmd(
-            "effect_specialairhi_lb",
+            "effect_specialairhi_lb_limit",
             effect_specialairhi_lb_limit,
             Priority::Low,
         )

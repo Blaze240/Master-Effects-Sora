@@ -211,6 +211,6 @@ unsafe extern "C" fn effect_attackdash_limit(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("cloud")
-        .effect_acmd("effect_attackdash", effect_attackdash_limit, Priority::Low)
+        .effect_acmd("effect_attackdash_limit", effect_attackdash_limit, Priority::Low)
         .install();
 }

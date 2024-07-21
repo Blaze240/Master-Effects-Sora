@@ -255,6 +255,6 @@ unsafe extern "C" fn effect_attacks3_limit(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("cloud")
-        .effect_acmd("effect_attacks3", effect_attacks3_limit, Priority::Low)
+        .effect_acmd("effect_attacks3_limit", effect_attacks3_limit, Priority::Low)
         .install();
 }

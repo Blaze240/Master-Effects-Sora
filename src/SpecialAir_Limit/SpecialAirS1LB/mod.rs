@@ -121,7 +121,7 @@ unsafe extern "C" fn effect_specialairs1_lb_limit(agent: &mut L2CAgentBase) {
 pub fn install() {
     Agent::new("cloud")
         .effect_acmd(
-            "effect_specialairs1_lb",
+            "effect_specialairs1_lb_limit",
             effect_specialairs1_lb_limit,
             Priority::Low,
         )

@@ -116,6 +116,6 @@ unsafe extern "C" fn effect_attackairn_limit(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("cloud")
-        .effect_acmd("effect_attackairn", effect_attackairn_limit, Priority::Low)
+        .effect_acmd("effect_attackairn_limit", effect_attackairn_limit, Priority::Low)
         .install();
 }

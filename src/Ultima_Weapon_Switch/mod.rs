@@ -12,54 +12,61 @@ use {
 
 unsafe extern "C" fn ultima_weapon_switch(agent: &mut L2CFighterCommon) {
     unsafe {
-        if WorkModule::is_flag(
-            agent.module_accessor,
-            *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
-        ) {
-            ModelModule::set_mesh_visibility(
+        let x = WorkModule::get_int(agent.module_accessor, *FIGHTER_INSTANCE_WORK_ID_INT_COLOR);
+        if x % 2 == 1 {
+            if WorkModule::is_flag(
                 agent.module_accessor,
-                Hash40::new("bastar_sword_r"),
-                false,
-            );
-            ModelModule::set_mesh_visibility(
-                agent.module_accessor,
-                Hash40::new("ultima_weapon_r"),
-                true,
-            );
-        } else if MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_start")
-            || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_air_start")
-            || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_dash")
-            || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_dash_end")
-            || MotionModule::motion_kind(agent.module_accessor)
-                == smash::hash40("final_air_dash_end")
-            || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_hit")
-            || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_air_hit")
-            || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_move")
-            || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_attack")
-            || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_fall")
-            || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_end")
-        {
-            ModelModule::set_mesh_visibility(
-                agent.module_accessor,
-                Hash40::new("bastar_sword_r"),
-                false,
-            );
-            ModelModule::set_mesh_visibility(
-                agent.module_accessor,
-                Hash40::new("ultima_weapon_r"),
-                true,
-            );
-        } else {
-            ModelModule::set_mesh_visibility(
-                agent.module_accessor,
-                Hash40::new("bastar_sword_r"),
-                true,
-            );
-            ModelModule::set_mesh_visibility(
-                agent.module_accessor,
-                Hash40::new("ultima_weapon_r"),
-                false,
-            );
+                *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
+            ) {
+                ModelModule::set_mesh_visibility(
+                    agent.module_accessor,
+                    Hash40::new("bastar_sword_r"),
+                    false,
+                );
+                ModelModule::set_mesh_visibility(
+                    agent.module_accessor,
+                    Hash40::new("ultima_weapon_r"),
+                    true,
+                );
+            } else if MotionModule::motion_kind(agent.module_accessor)
+                == smash::hash40("final_start")
+                || MotionModule::motion_kind(agent.module_accessor)
+                    == smash::hash40("final_air_start")
+                || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_dash")
+                || MotionModule::motion_kind(agent.module_accessor)
+                    == smash::hash40("final_dash_end")
+                || MotionModule::motion_kind(agent.module_accessor)
+                    == smash::hash40("final_air_dash_end")
+                || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_hit")
+                || MotionModule::motion_kind(agent.module_accessor)
+                    == smash::hash40("final_air_hit")
+                || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_move")
+                || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_attack")
+                || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_fall")
+                || MotionModule::motion_kind(agent.module_accessor) == smash::hash40("final_end")
+            {
+                ModelModule::set_mesh_visibility(
+                    agent.module_accessor,
+                    Hash40::new("bastar_sword_r"),
+                    false,
+                );
+                ModelModule::set_mesh_visibility(
+                    agent.module_accessor,
+                    Hash40::new("ultima_weapon_r"),
+                    true,
+                );
+            } else {
+                ModelModule::set_mesh_visibility(
+                    agent.module_accessor,
+                    Hash40::new("bastar_sword_r"),
+                    true,
+                );
+                ModelModule::set_mesh_visibility(
+                    agent.module_accessor,
+                    Hash40::new("ultima_weapon_r"),
+                    false,
+                );
+            }
         }
     }
 }

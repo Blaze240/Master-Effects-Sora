@@ -82,7 +82,7 @@ unsafe extern "C" fn effect_specialn_lb_limit(agent: &mut L2CAgentBase) {
 pub fn install() {
     Agent::new("cloud")
         .effect_acmd(
-            "effect_specialn_lb",
+            "effect_specialn_lb_limit",
             effect_specialn_lb_limit,
             Priority::Low,
         )

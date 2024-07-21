@@ -125,7 +125,7 @@ unsafe extern "C" fn effect_attackairhi_limit(agent: &mut L2CAgentBase) {
 pub fn install() {
     Agent::new("cloud")
         .effect_acmd(
-            "effect_attackairhi",
+            "effect_attackairhi_limit",
             effect_attackairhi_limit,
             Priority::Low,
         )
