@@ -23,7 +23,7 @@ unsafe extern "C" fn effect_specialairs1_fusion(agent: &mut L2CAgentBase) {
         if macros::is_excute(agent) {
             macros::EFFECT(
                 agent,
-                Hash40::new("cloud_kyogiri_stroke1_l_lb"),
+                Hash40::new("cloud_kyogiri_stroke1_l"),
                 Hash40::new("top"),
                 0,
                 11,
@@ -45,7 +45,7 @@ unsafe extern "C" fn effect_specialairs1_fusion(agent: &mut L2CAgentBase) {
         if macros::is_excute(agent) {
             macros::EFFECT(
                 agent,
-                Hash40::new("cloud_kyogiri_stroke1_r_lb"),
+                Hash40::new("cloud_kyogiri_stroke1_r"),
                 Hash40::new("top"),
                 0,
                 11,
@@ -76,13 +76,13 @@ unsafe extern "C" fn effect_specialairs1_fusion(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_OFF_KIND(
             agent,
-            Hash40::new("cloud_kyogiri_stroke1_l_lb"),
+            Hash40::new("cloud_kyogiri_stroke1_l"),
             false,
             false,
         );
         macros::EFFECT_OFF_KIND(
             agent,
-            Hash40::new("cloud_kyogiri_stroke1_r_lb"),
+            Hash40::new("cloud_kyogiri_stroke1_r"),
             false,
             false,
         );
