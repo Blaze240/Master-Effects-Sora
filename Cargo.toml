@@ -1,5 +1,5 @@
 [package]
-name = "cloud_fusionswitch"
+name = "cloud_limit_effects"
 version = "0.1.0"
 authors = ["Blaze240"]
 edition = "2018"

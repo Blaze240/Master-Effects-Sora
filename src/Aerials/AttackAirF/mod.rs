@@ -9,7 +9,7 @@ use {
     smash_script::*,
     smashline::{Priority::*, *},
 };
-unsafe extern "C" fn effect_attackairf_fusion(agent: &mut L2CAgentBase) {
+unsafe extern "C" fn effect_attackairf(agent: &mut L2CAgentBase) {
     frame(agent.lua_state_agent, 10.0);
     if macros::is_excute(agent) {
         macros::EFFECT(
@@ -34,10 +34,6 @@ unsafe extern "C" fn effect_attackairf_fusion(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 16.0);
     if macros::is_excute(agent) {
-        if WorkModule::is_flag(
-            agent.module_accessor,
-            *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
-        ) {
             macros::EFFECT_FOLLOW_WORK(
                 agent,
                 *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE,
@@ -51,11 +47,7 @@ unsafe extern "C" fn effect_attackairf_fusion(agent: &mut L2CAgentBase) {
                 1,
                 true,
             );
-
             macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.2);
-        } else {
-            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.2);
-        }
     }
     frame(agent.lua_state_agent, 17.0);
     if macros::is_excute(agent) {
@@ -107,8 +99,8 @@ unsafe extern "C" fn effect_attackairf_fusion(agent: &mut L2CAgentBase) {
 pub fn install() {
     Agent::new("cloud")
         .effect_acmd(
-            "effect_attackairf_fusion",
-            effect_attackairf_fusion,
+            "effect_attackairf",
+            effect_attackairf,
             Priority::Low,
         )
         .install();

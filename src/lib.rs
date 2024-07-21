@@ -13,19 +13,13 @@
     clippy::borrow_interior_mutable_const
 )]
 
-mod Fusion_Sword_Switch;
 mod Aerials;
 mod Grounded_Moves;
-mod SpecialAir;
-mod Special;
 
 
-
-#[skyline::main(name = "cloud_fusion_switch")]
+#[skyline::main(name = "cloud_limit_effects")]
 pub fn main() {
-    Fusion_Sword_Switch::install();
 	Aerials::install();
 	Grounded_Moves::install();
-	Special::install();
-	SpecialAir::install();
+
 }

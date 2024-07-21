@@ -10,7 +10,7 @@ use {
     smashline::{Priority::*, *},
 };
 
-unsafe extern "C" fn effect_attackairb_fusion(agent: &mut L2CAgentBase) {
+unsafe extern "C" fn effect_attackairb(agent: &mut L2CAgentBase) {
     frame(agent.lua_state_agent, 10.0);
     if macros::is_excute(agent) {
         if WorkModule::is_flag(
@@ -52,6 +52,7 @@ unsafe extern "C" fn effect_attackairb_fusion(agent: &mut L2CAgentBase) {
                 0.1,
             );
         } else {
+            macros::EFFECT_FOLLOW_WORK(agent, *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE, Hash40::new("haver"), 0, 0, 0, 0, 0, 0, 1, true);
             macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.48);
             macros::AFTER_IMAGE4_ON_arg29(
                 agent,
@@ -101,6 +102,6 @@ unsafe extern "C" fn effect_attackairb_fusion(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("cloud")
-        .effect_acmd("effect_attackairb_fusion", effect_attackairb_fusion, Priority::Low)
+        .effect_acmd("effect_attackairb", effect_attackairb, Priority::Low)
         .install();
 }

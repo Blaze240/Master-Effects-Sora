@@ -10,7 +10,7 @@ use {
     smashline::{Priority::*, *},
 };
 
-unsafe extern "C" fn effect_attackdash_fusion(agent: &mut L2CAgentBase) {
+unsafe extern "C" fn effect_attackdash(agent: &mut L2CAgentBase) {
     frame(agent.lua_state_agent, 7.0);
     if macros::is_excute(agent) {
         macros::FOOT_EFFECT(
@@ -55,27 +55,33 @@ unsafe extern "C" fn effect_attackdash_fusion(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 9.0);
     if macros::is_excute(agent) {
-        if WorkModule::is_flag(
-            agent.module_accessor,
-            *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
-        ) {
-            macros::EFFECT_FOLLOW_WORK(
-                agent,
-                *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE,
-                Hash40::new("haver"),
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                true,
-            );
-            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.3);
-        } else {
-            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.3);
-        }
+        macros::EFFECT_FOLLOW_WORK(
+            agent,
+            *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE,
+            Hash40::new("haver"),
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            true,
+        );
+        macros::EFFECT_FOLLOW_WORK(
+            agent,
+            *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE,
+            Hash40::new("haver"),
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            true,
+        );
+        macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.3);
     }
     frame(agent.lua_state_agent, 9.0);
     if macros::is_excute(agent) {
@@ -212,8 +218,8 @@ unsafe extern "C" fn effect_attackdash_fusion(agent: &mut L2CAgentBase) {
 pub fn install() {
     Agent::new("cloud")
         .effect_acmd(
-            "effect_attackdash_fusion",
-            effect_attackdash_fusion,
+            "effect_attackdash",
+            effect_attackdash,
             Priority::Low,
         )
         .install();
