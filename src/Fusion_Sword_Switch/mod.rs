@@ -12,7 +12,7 @@ use {
 
 unsafe extern "C" fn fusion_sword_switch(agent: &mut L2CFighterCommon) {
     unsafe {
-        if  WorkModule::get_int(agent.module_accessor, *FIGHTER_INSTANCE_WORK_ID_INT_COLOR) % 2 == 0 {
+        if  WorkModule::get_int(agent.module_accessor, *FIGHTER_INSTANCE_WORK_ID_INT_COLOR) % 2 == 1 {
             if WorkModule::is_flag(
                 agent.module_accessor,
                 *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
