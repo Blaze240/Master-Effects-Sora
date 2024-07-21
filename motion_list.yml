@@ -2035,7 +2035,7 @@ list:
     scripts:
       - expression_attack13
       - sound_attack13
-      - effect_attack13
+      - effect_attack13_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2065,7 +2065,7 @@ list:
     scripts:
       - expression_attackdash
       - sound_attackdash
-      - effect_attackdash
+      - effect_attackdash_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2095,7 +2095,7 @@ list:
     scripts:
       - expression_attacks3
       - sound_attacks3
-      - effect_attacks3
+      - effect_attacks3_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2125,7 +2125,7 @@ list:
     scripts:
       - expression_attackhi3
       - sound_attackhi3
-      - effect_attackhi3
+      - effect_attackhi3_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2185,7 +2185,7 @@ list:
     scripts:
       - expression_attacks4
       - sound_attacks4
-      - effect_attacks4
+      - effect_attacks4_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2245,7 +2245,7 @@ list:
     scripts:
       - expression_attackhi4
       - sound_attackhi4
-      - effect_attackhi4
+      - effect_attackhi4_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2305,7 +2305,7 @@ list:
     scripts:
       - expression_attacklw4
       - sound_attacklw4
-      - effect_attacklw4
+      - effect_attacklw4_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2365,7 +2365,7 @@ list:
     scripts:
       - expression_attackairn
       - sound_attackairn
-      - effect_attackairn
+      - effect_attackairn_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2395,7 +2395,7 @@ list:
     scripts:
       - expression_attackairf
       - sound_attackairf
-      - effect_attackairf
+      - effect_attackairf_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2425,7 +2425,7 @@ list:
     scripts:
       - expression_attackairb
       - sound_attackairb
-      - effect_attackairb
+      - effect_attackairb_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2455,7 +2455,7 @@ list:
     scripts:
       - expression_attackairhi
       - sound_attackairhi
-      - effect_attackairhi
+      - effect_attackairhi_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2485,7 +2485,7 @@ list:
     scripts:
       - expression_attackairlw
       - sound_attackairlw
-      - effect_attackairlw
+      - effect_attackairlw_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2725,7 +2725,7 @@ list:
     scripts:
       - expression_specialn_lb
       - sound_specialn_lb
-      - effect_specialn_lb
+      - effect_specialn_lb_limit
     extra:
       xlu_start: 10
       xlu_end: 18
@@ -2755,7 +2755,7 @@ list:
     scripts:
       - expression_specialairn_lb
       - sound_specialairn_lb
-      - effect_specialairn_lb
+      - effect_specialairn_lb_limit
     extra:
       xlu_start: 10
       xlu_end: 18
@@ -2965,7 +2965,7 @@ list:
     scripts:
       - expression_specials1_lb
       - sound_specials1_lb
-      - effect_specials1_lb
+      - effect_specials1_lb_limit
     extra:
       xlu_start: 6
       xlu_end: 12
@@ -2995,7 +2995,7 @@ list:
     scripts:
       - expression_specials2_lb
       - sound_specials2_lb
-      - effect_specials2_lb
+      - effect_specials2_lb_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3025,7 +3025,7 @@ list:
     scripts:
       - expression_specials3_lb
       - sound_specials3_lb
-      - effect_specials3_lb
+      - effect_specials3_lb_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3055,7 +3055,7 @@ list:
     scripts:
       - expression_specialairs1_lb
       - sound_specialairs1_lb
-      - effect_specialairs1_lb
+      - effect_specialairs1_lb_limit
     extra:
       xlu_start: 6
       xlu_end: 12
@@ -3085,7 +3085,7 @@ list:
     scripts:
       - expression_specialairs2_lb
       - sound_specialairs2_lb
-      - effect_specialairs2_lb
+      - effect_specialairs2_lb_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3115,7 +3115,7 @@ list:
     scripts:
       - expression_specialairs3_lb
       - sound_specialairs3_lb
-      - effect_specialairs3_lb
+      - effect_specialairs3_lb_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3325,7 +3325,7 @@ list:
     scripts:
       - expression_specialhi_lb
       - sound_specialhi_lb
-      - effect_specialhi_lb
+      - effect_specialhi_lb_limit
     extra:
       xlu_start: 5
       xlu_end: 12
@@ -3355,7 +3355,7 @@ list:
     scripts:
       - expression_specialairhi_lb
       - sound_specialairhi_lb
-      - effect_specialairhi_lb
+      - effect_specialairhi_lb_limit
     extra:
       xlu_start: 5
       xlu_end: 12
@@ -3625,7 +3625,7 @@ list:
     scripts:
       - expression_speciallw
       - sound_speciallw
-      - effect_speciallw
+      - effect_speciallw_limit
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3655,7 +3655,7 @@ list:
     scripts:
       - expression_specialairlw
       - sound_specialairlw
-      - effect_specialairlw
+      - effect_specialairlw_limit
     extra:
       xlu_start: 0
       xlu_end: 0

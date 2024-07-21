@@ -12,8 +12,7 @@ use {
 
 unsafe extern "C" fn ultima_weapon_switch(agent: &mut L2CFighterCommon) {
     unsafe {
-        let x = WorkModule::get_int(agent.module_accessor, *FIGHTER_INSTANCE_WORK_ID_INT_COLOR);
-        if x % 2 == 1 {
+        if  WorkModule::get_int(agent.module_accessor, *FIGHTER_INSTANCE_WORK_ID_INT_COLOR) % 2 == 0 {
             if WorkModule::is_flag(
                 agent.module_accessor,
                 *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
