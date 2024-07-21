@@ -59,8 +59,6 @@ unsafe extern "C" fn effect_attackdash_limit(agent: &mut L2CAgentBase) {
             agent.module_accessor,
             *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
         ) {
-            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.3);
-        } else {
             macros::EFFECT_FOLLOW_WORK(
                 agent,
                 *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE,
@@ -74,6 +72,8 @@ unsafe extern "C" fn effect_attackdash_limit(agent: &mut L2CAgentBase) {
                 1,
                 true,
             );
+            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.3);
+        } else {
             macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.3);
         }
     }
@@ -211,6 +211,10 @@ unsafe extern "C" fn effect_attackdash_limit(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("cloud")
-        .effect_acmd("effect_attackdash_limit", effect_attackdash_limit, Priority::Low)
+        .effect_acmd(
+            "effect_attackdash_limit",
+            effect_attackdash_limit,
+            Priority::Low,
+        )
         .install();
 }

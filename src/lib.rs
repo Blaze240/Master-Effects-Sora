@@ -13,20 +13,19 @@
     clippy::borrow_interior_mutable_const
 )]
 
-mod Ultima_Weapon_Switch;
+mod Fusion_Sword_Switch;
 mod Aerials;
 mod Grounded_Moves;
-mod Special_Limit;
-mod SpecialAir_Limit;
+mod SpecialAir;
+mod Special;
 
 
-#[skyline::main(name = "cloud_limit_switch")]
+
+#[skyline::main(name = "cloud_fusion_switch")]
 pub fn main() {
-    Ultima_Weapon_Switch::install();
+    Fusion_Sword_Switch::install();
 	Aerials::install();
 	Grounded_Moves::install();
-	Special_Limit::install();
-	SpecialAir_Limit::install();
-
-
+	Special::install();
+	SpecialAir::install();
 }

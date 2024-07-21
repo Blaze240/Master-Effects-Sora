@@ -20,12 +20,12 @@ unsafe extern "C" fn ultima_weapon_switch(agent: &mut L2CFighterCommon) {
                 ModelModule::set_mesh_visibility(
                     agent.module_accessor,
                     Hash40::new("bastar_sword_r"),
-                    false,
+                    true,
                 );
                 ModelModule::set_mesh_visibility(
                     agent.module_accessor,
-                    Hash40::new("ultima_weapon_r"),
-                    true,
+                    Hash40::new("fusionsword1"),
+                    false,
                 );
             } else if MotionModule::motion_kind(agent.module_accessor)
                 == smash::hash40("final_start")
@@ -47,23 +47,23 @@ unsafe extern "C" fn ultima_weapon_switch(agent: &mut L2CFighterCommon) {
                 ModelModule::set_mesh_visibility(
                     agent.module_accessor,
                     Hash40::new("bastar_sword_r"),
-                    false,
+                    true,
                 );
                 ModelModule::set_mesh_visibility(
                     agent.module_accessor,
-                    Hash40::new("ultima_weapon_r"),
-                    true,
+                    Hash40::new("fusionsword1"),
+                    false,
                 );
             } else {
                 ModelModule::set_mesh_visibility(
                     agent.module_accessor,
                     Hash40::new("bastar_sword_r"),
-                    true,
+                    false,
                 );
                 ModelModule::set_mesh_visibility(
                     agent.module_accessor,
-                    Hash40::new("ultima_weapon_r"),
-                    false,
+                    Hash40::new("fusionsword1"),
+                    true,
                 );
             }
         }
