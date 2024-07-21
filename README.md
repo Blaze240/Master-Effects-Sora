@@ -21,3 +21,5 @@ Skyline plugin that modifies Cloud's effects while in Limit Break form as well a
 * Base weapon used is now the main unfused Fusion Sword.
   * Weapon is switched to the original completed Fusion Sword during Limit Break.
 * Swordflare is removed from most moves at base form.
+
+Two versions of the mod are available: one which incorporates the weapon switches and another which purely modifies the effects.
