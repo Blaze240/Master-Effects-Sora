@@ -35,20 +35,40 @@ unsafe extern "C" fn effect_attackairlw(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 10.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_FOLLOW_WORK(
-            agent,
-            *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE,
-            Hash40::new("haver"),
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            true,
-        );
-        macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.5);
+        if WorkModule::is_flag(
+            agent.module_accessor,
+            *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
+        ) {
+            macros::EFFECT_FOLLOW_WORK(
+                agent,
+                *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE_LB,
+                Hash40::new("haver"),
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                true,
+            );
+            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.5);
+        } else {
+            macros::EFFECT_FOLLOW_WORK(
+                agent,
+                *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE,
+                Hash40::new("haver"),
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                true,
+            );
+            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.5);
+        }
     }
     frame(agent.lua_state_agent, 11.0);
     if macros::is_excute(agent) {
@@ -75,6 +95,11 @@ unsafe extern "C" fn effect_attackairlw(agent: &mut L2CAgentBase) {
         macros::EFFECT_OFF_KIND_WORK(
             agent,
             *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE,
+            true,
+            true,
+        );macros::EFFECT_OFF_KIND_WORK(
+            agent,
+            *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE_LB,
             true,
             true,
         );

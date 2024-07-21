@@ -97,7 +97,23 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 20.0);
     if macros::is_excute(agent) {
-            macros::EFFECT_FOLLOW_WORK(agent, *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE, Hash40::new("haver"), 0, 0, 0, 0, 0, 0, 1, true);
+        if WorkModule::is_flag(
+            agent.module_accessor,
+            *FIGHTER_CLOUD_INSTANCE_WORK_ID_FLAG_LIMIT_BREAK,
+        ) {
+            macros::EFFECT_FOLLOW_WORK(
+                agent,
+                *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE_LB,
+                Hash40::new("haver"),
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                true,
+            );
             macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.1);
             agent.clear_lua_stack();
             lua_args!(
@@ -117,7 +133,40 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
                 0.669,
             );
             macros::LAST_EFFECT_SET_RATE(agent, 1.2);
-            sv_animcmd::EFFECT_OFF(agent.lua_state_agent);
+        } else {
+            macros::EFFECT_FOLLOW_WORK(
+                agent,
+                *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE,
+                Hash40::new("haver"),
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                true,
+            );
+            macros::LAST_EFFECT_SET_OFFSET_TO_CAMERA_FLAT(agent, 0.1);
+            agent.clear_lua_stack();
+            lua_args!(
+                agent,
+                Hash40::new("cloud_speedline"),
+                Hash40::new("top"),
+                0,
+                4.5,
+                -2,
+                0,
+                180,
+                4,
+                0.85,
+                true,
+                0.492,
+                0.869,
+                0.669,
+            );
+            macros::LAST_EFFECT_SET_RATE(agent, 1.2);
+        }
     }
     frame(agent.lua_state_agent, 21.0);
     if macros::is_excute(agent) {
@@ -146,6 +195,12 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
         macros::EFFECT_OFF_KIND_WORK(
             agent,
             *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE,
+            false,
+            true,
+        );
+        macros::EFFECT_OFF_KIND_WORK(
+            agent,
+            *FIGHTER_CLOUD_INSTANCE_WORK_ID_INT_EFFECT_KIND_SWORD_FLARE_LB,
             false,
             true,
         );
