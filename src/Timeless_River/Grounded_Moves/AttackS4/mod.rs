@@ -68,7 +68,7 @@ unsafe extern "C" fn effect_attacks4(agent: &mut L2CAgentBase) {
         );
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_keyblade_light"),
+            Hash40::new("trail_keyblade_light_tr"),
             Hash40::new("haver"),
             0,
             0,

@@ -174,7 +174,7 @@ unsafe extern "C" fn effect_speciallw(agent: &mut L2CAgentBase) {
     frame(agent.lua_state_agent, 14.0);
     if macros::is_excute(agent) {
         macros::AFTER_IMAGE_OFF(agent, 0);
-        macros::EFFECT_DETACH_KIND(agent, Hash40::new("trail_counter_attack"), -1);
+        macros::EFFECT_DETACH_KIND(agent, Hash40::new("trail_counter_attack_tr"), -1);
     }
     frame(agent.lua_state_agent, 17.0);
     if macros::is_excute(agent) {
@@ -182,7 +182,7 @@ unsafe extern "C" fn effect_speciallw(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 18.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare"), false, true);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare_tr"), false, true);
     }
 }
 

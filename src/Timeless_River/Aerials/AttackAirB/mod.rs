@@ -42,27 +42,27 @@ unsafe extern "C" fn effect_attackairb(agent: &mut L2CAgentBase) {
                 1.04,
                 true,
             );
-        } else {
-            if macros::is_excute(agent) {
-                macros::EFFECT_FOLLOW(
-                    agent,
-                    Hash40::new("trail_atk_slash_air_b"),
-                    Hash40::new("top"),
-                    0,
-                    -0.2,
-                    -0.1,
-                    0,
-                    0,
-                    0,
-                    1,
-                    true,
-                );
-            }
+        }
+    } else {
+        if macros::is_excute(agent) {
+            macros::EFFECT_FOLLOW(
+                agent,
+                Hash40::new("trail_atk_slash_air_b_tr"),
+                Hash40::new("top"),
+                0,
+                -0.2,
+                -0.1,
+                0,
+                0,
+                0,
+                1,
+                true,
+            );
         }
     }
     frame(agent.lua_state_agent, 16.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare"), false, true);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare_tr"), false, true);
     }
 }
 
