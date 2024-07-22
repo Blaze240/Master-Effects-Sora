@@ -55,7 +55,7 @@ unsafe extern "C" fn effect_attacks4(agent: &mut L2CAgentBase) {
         );
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_keyblade_flare"),
+            Hash40::new("trail_keyblade_flare_tr"),
             Hash40::new("haver"),
             0,
             0,
@@ -82,7 +82,7 @@ unsafe extern "C" fn effect_attacks4(agent: &mut L2CAgentBase) {
         EffectModule::enable_sync_init_pos_last(agent.module_accessor);
         macros::AFTER_IMAGE4_ON_arg29(
             agent,
-            Hash40::new("tex_trail_keyblade3"),
+            Hash40::new("tex_trail_keyblade3_tr"),
             Hash40::new("tex_trail_keyblade2"),
             20,
             Hash40::new("haver"),
@@ -115,12 +115,12 @@ unsafe extern "C" fn effect_attacks4(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 23.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_light"), false, true);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_light_tr"), false, true);
     }
     frame(agent.lua_state_agent, 25.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare"), false, true);
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_light"), false, true);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare_tr"), false, true);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_light_tr"), false, true);
         macros::AFTER_IMAGE_OFF(agent, 4);
     }
 }

@@ -36,7 +36,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_smash_lw_flash"),
+            Hash40::new("trail_smash_lw_flash_tr"),
             Hash40::new("haver"),
             0,
             11,
@@ -52,7 +52,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_smash_lw_speedline"),
+            Hash40::new("trail_smash_lw_speedline_tr"),
             Hash40::new("top"),
             0,
             0,
@@ -68,7 +68,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT(
             agent,
-            Hash40::new("trail_smash_lw_impact"),
+            Hash40::new("trail_smash_lw_impact_tr"),
             Hash40::new("top"),
             0,
             0,
@@ -87,7 +87,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
         );
         macros::EFFECT_FOLLOW_ALPHA(
             agent,
-            Hash40::new("trail_keyblade_flare"),
+            Hash40::new("trail_keyblade_flare_tr"),
             Hash40::new("haver"),
             0,
             0,
@@ -101,7 +101,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
         );
         macros::EFFECT(
             agent,
-            Hash40::new("trail_smash_lw_attack"),
+            Hash40::new("trail_smash_lw_attack_tr"),
             Hash40::new("haver"),
             0,
             -2,
@@ -144,7 +144,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 26.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare"), false, true);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare_tr"), false, true);
     }
     frame(agent.lua_state_agent, 57.0);
     if macros::is_excute(agent) {

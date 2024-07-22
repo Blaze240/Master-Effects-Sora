@@ -14,7 +14,7 @@ unsafe extern "C" fn effect_attackairb(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_keyblade_flare"),
+            Hash40::new("trail_keyblade_flare_tr"),
             Hash40::new("haver"),
             0,
             0,
@@ -31,7 +31,7 @@ unsafe extern "C" fn effect_attackairb(agent: &mut L2CAgentBase) {
         if macros::is_excute(agent) {
             macros::EFFECT_FOLLOW(
                 agent,
-                Hash40::new("trail_atk_slash_air_b"),
+                Hash40::new("trail_atk_slash_air_b_tr"),
                 Hash40::new("top"),
                 0.8,
                 -1,
