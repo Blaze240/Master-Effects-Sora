@@ -9,13 +9,13 @@ use {
     smash_script::*,
     smashline::{Priority::*, *},
 };
-unsafe extern "C" fn effect_attackairb(agent: &mut L2CAgentBase) {
-    frame(agent.lua_state_agent, 11.0);
+
+unsafe extern "C" fn effect_landingairlw(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
-        macros::EFFECT_FOLLOW(
+        macros::LANDING_EFFECT(
             agent,
-            Hash40::new("trail_keyblade_flare"),
-            Hash40::new("haver"),
+            Hash40::new("null"),
+            Hash40::new("top"),
             0,
             0,
             0,
@@ -23,51 +23,65 @@ unsafe extern "C" fn effect_attackairb(agent: &mut L2CAgentBase) {
             0,
             0,
             1,
-            true,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            false,
         );
     }
-    frame(agent.lua_state_agent, 12.0);
     if get_value_float(agent.lua_state_agent, *SO_VAR_FLOAT_LR) < 0.0 {
         if macros::is_excute(agent) {
-            macros::EFFECT_FOLLOW(
+            macros::EFFECT(
                 agent,
-                Hash40::new("trail_atk_slash_air_b"),
+                Hash40::new("trail_air_lw_impact"),
                 Hash40::new("top"),
-                0.8,
-                -1,
-                0.7,
                 0,
                 0,
-                5,
-                1.04,
-                true,
+                0,
+                0,
+                180,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                false,
             );
         } else {
             if macros::is_excute(agent) {
-                macros::EFFECT_FOLLOW(
+                macros::EFFECT(
                     agent,
-                    Hash40::new("trail_atk_slash_air_b"),
+                    Hash40::new("trail_air_lw_impact"),
                     Hash40::new("top"),
                     0,
-                    -0.2,
-                    -0.1,
+                    0,
+                    0,
                     0,
                     0,
                     0,
                     1,
-                    true,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    false,
                 );
             }
         }
     }
     frame(agent.lua_state_agent, 16.0);
-    if macros::is_excute(agent) {
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare"), false, true);
-    }
 }
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_attackairb", effect_attackairb, Priority::Low)
+        .effect_acmd("effect_landingairlw", effect_landingairlw, Priority::Low)
         .install();
 }

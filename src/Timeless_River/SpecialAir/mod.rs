@@ -16,6 +16,7 @@ mod SpecialAirS1;
 mod SpecialAirS2;
 mod SpecialAirS3;
 mod SpecialAirSStart;
+mod SpecialAirSSearch;
 
 pub fn install() {
     SpecialAirHi::install();
@@ -24,4 +25,5 @@ pub fn install() {
     SpecialAirS1::install();
     SpecialAirS2::install();
     SpecialAirS3::install();
+    SpecialAirSSearch::install();
 }

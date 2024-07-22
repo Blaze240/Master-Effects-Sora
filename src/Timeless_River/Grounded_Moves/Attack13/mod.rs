@@ -13,12 +13,54 @@ use {
 unsafe extern "C" fn effect_attack13(agent: &mut L2CAgentBase) {
     frame(agent.lua_state_agent, 9.0);
     if macros::is_excute(agent) {
-        macros::FOOT_EFFECT(agent, Hash40::new("null"), Hash40::new("top"), 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, true);
-        macros::EFFECT_FOLLOW(agent, Hash40::new("trail_keyblade_flare"), Hash40::new("haver"), 0, 0, 0, 0, 0, 0, 1, true);
+        macros::FOOT_EFFECT(
+            agent,
+            Hash40::new("null"),
+            Hash40::new("top"),
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            true,
+        );
+        macros::EFFECT_FOLLOW(
+            agent,
+            Hash40::new("trail_keyblade_flare"),
+            Hash40::new("haver"),
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            true,
+        );
     }
     frame(agent.lua_state_agent, 10.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_FOLLOW(agent, Hash40::new("trail_atk_slash"), Hash40::new("top"), 0, 0, 0, 0, 0, 0, 1, true);
+        macros::EFFECT_FOLLOW(
+            agent,
+            Hash40::new("trail_atk_slash"),
+            Hash40::new("top"),
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            true,
+        );
     }
     frame(agent.lua_state_agent, 18.0);
     if macros::is_excute(agent) {

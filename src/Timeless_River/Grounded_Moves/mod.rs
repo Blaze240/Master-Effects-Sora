@@ -21,6 +21,8 @@ mod AttackS3;
 mod AttackS32;
 mod AttackS33;
 mod AttackS4;
+mod ThrowF;
+mod Landing_AirLw;
 
 pub fn install() {
     Attack11::install();
@@ -34,4 +36,6 @@ pub fn install() {
     AttackHi4::install();
     AttackLw3::install();
     AttackLw4::install();
+    ThrowF::install();
+    Landing_AirLw::install();
 }

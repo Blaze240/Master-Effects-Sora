@@ -16,6 +16,7 @@ mod SpecialS1;
 mod SpecialS2;
 mod SpecialS3;
 mod SpecialSStart;
+mod SpecialSSearch;
 
 pub fn install() {
     SpecialHi::install();
@@ -24,4 +25,5 @@ pub fn install() {
     SpecialS1::install();
     SpecialS2::install();
     SpecialS3::install();
+    SpecialSSearch::install();
 }
