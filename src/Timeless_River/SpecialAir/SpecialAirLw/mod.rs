@@ -138,7 +138,7 @@ unsafe extern "C" fn effect_specialairlw(agent: &mut L2CAgentBase) {
         );
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_keyblade_light"),
+            Hash40::new("trail_keyblade_light_tr"),
             Hash40::new("haver"),
             0,
             5,
@@ -157,7 +157,7 @@ unsafe extern "C" fn effect_specialairlw(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 17.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_light"), false, true);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_light_tr"), false, true);
     }
     frame(agent.lua_state_agent, 18.0);
     if macros::is_excute(agent) {

@@ -36,7 +36,7 @@ unsafe extern "C" fn effect_landingairlw(agent: &mut L2CAgentBase) {
         if macros::is_excute(agent) {
             macros::EFFECT(
                 agent,
-                Hash40::new("trail_air_lw_impact"),
+                Hash40::new("trail_air_lw_impact_tr"),
                 Hash40::new("top"),
                 0,
                 0,
@@ -53,11 +53,12 @@ unsafe extern "C" fn effect_landingairlw(agent: &mut L2CAgentBase) {
                 0,
                 false,
             );
-        } else {
+        } 
+    }else {
             if macros::is_excute(agent) {
                 macros::EFFECT(
                     agent,
-                    Hash40::new("trail_air_lw_impact"),
+                    Hash40::new("trail_air_lw_impact_tr"),
                     Hash40::new("top"),
                     0,
                     0,
@@ -76,8 +77,6 @@ unsafe extern "C" fn effect_landingairlw(agent: &mut L2CAgentBase) {
                 );
             }
         }
-    }
-    frame(agent.lua_state_agent, 16.0);
 }
 
 pub fn install() {

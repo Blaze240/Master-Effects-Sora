@@ -50,7 +50,7 @@ unsafe extern "C" fn effect_attack12(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FLW_POS(
             agent,
-            Hash40::new("trail_keyblade_speedline"),
+            Hash40::new("trail_keyblade_speedline_tr"),
             Hash40::new("haver"),
             0,
             0,
