@@ -81,6 +81,6 @@ unsafe extern "C" fn effect_landingairlw(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_landingairlw", effect_landingairlw, Priority::Low)
+        .effect_acmd("effect_landingairlw_tr", effect_landingairlw, Priority::Low)
         .install();
 }

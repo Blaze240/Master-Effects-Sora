@@ -167,6 +167,6 @@ unsafe extern "C" fn effect_specialairlw(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_specialairlw", effect_specialairlw, Priority::Low)
+        .effect_acmd("effect_specialairlw_tr", effect_specialairlw, Priority::Low)
         .install();
 }

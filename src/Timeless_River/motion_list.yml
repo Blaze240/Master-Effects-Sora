@@ -2125,7 +2125,7 @@ list:
     scripts:
       - expression_attack11
       - sound_attack11
-      - effect_attack11
+      - effect_attack11_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2155,7 +2155,7 @@ list:
     scripts:
       - expression_attack12
       - sound_attack12
-      - effect_attack12
+      - effect_attack12_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2185,7 +2185,7 @@ list:
     scripts:
       - expression_attack13
       - sound_attack13
-      - effect_attack13
+      - effect_attack13_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2245,7 +2245,7 @@ list:
     scripts:
       - expression_attacks3
       - sound_attacks3
-      - effect_attacks3
+      - effect_attacks3_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2275,7 +2275,7 @@ list:
     scripts:
       - expression_attacks32
       - sound_attacks32
-      - effect_attacks32
+      - effect_attacks32_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2305,7 +2305,7 @@ list:
     scripts:
       - expression_attacks33
       - sound_attacks33
-      - effect_attacks33
+      - effect_attacks33_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2335,7 +2335,7 @@ list:
     scripts:
       - expression_attackhi3
       - sound_attackhi3
-      - effect_attackhi3
+      - effect_attackhi3_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2365,7 +2365,7 @@ list:
     scripts:
       - expression_attacklw3
       - sound_attacklw3
-      - effect_attacklw3
+      - effect_attacklw3_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2395,7 +2395,7 @@ list:
     scripts:
       - expression_attacks4
       - sound_attacks4
-      - effect_attacks4
+      - effect_attacks4_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2515,7 +2515,7 @@ list:
     scripts:
       - expression_attacklw4
       - sound_attacklw4
-      - effect_attacklw4
+      - effect_attacklw4_tr
     extra:
       xlu_start: 3
       xlu_end: 7
@@ -2575,14 +2575,14 @@ list:
     scripts:
       - expression_attackairn
       - sound_attackairn
-      - effect_attackairn
+      - effect_attackairn_tr
     extra:
       xlu_start: 0
       xlu_end: 0
       cancel_frame: 42
       no_stop_intp: false
-  "0x0d7484f6cf":
-    game_script: "0x1034e9490a"
+  attack_air_n2:
+    game_script: game_attackairn2
     flags:
       turn: false
       loop: false
@@ -2600,19 +2600,19 @@ list:
       unk_2000: false
     blend_frames: 0
     animations:
-      - name: "0x15499dde93"
+      - name: c05attackairn2.nuanmb
         unk: 0
     scripts:
-      - "0x16788383e7"
-      - "0x113a69ff28"
-      - "0x12eeb75a8e"
+      - expression_attackairn2
+      - sound_attackairn2
+      - effect_attackairn2_tr
     extra:
       xlu_start: 0
       xlu_end: 0
       cancel_frame: 37
       no_stop_intp: false
-  "0x0d0383c659":
-    game_script: "0x1043ee799c"
+  attack_air_n3:
+    game_script: game_attackairn3
     flags:
       turn: false
       loop: false
@@ -2630,12 +2630,12 @@ list:
       unk_2000: false
     blend_frames: 0
     animations:
-      - name: "0x158537de0d"
+      - name: c05attackairn3.nuanmb
         unk: 0
     scripts:
-      - "0x160f84b371"
-      - "0x114d6ecfbe"
-      - "0x1299b06a18"
+    - expression_attackairn3
+    - sound_attackairn3
+    - effect_attackairn3_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2665,7 +2665,7 @@ list:
     scripts:
       - expression_attackairf
       - sound_attackairf
-      - effect_attackairf
+      - effect_attackairf_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2690,12 +2690,12 @@ list:
       unk_2000: false
     blend_frames: 0
     animations:
-      - name: "0x15499dde93"
+      - name: c05attackairn2.nuanmb
         unk: 0
     scripts:
       - expression_attackairf2
       - sound_attackairf2
-      - effect_attackairf2
+      - effect_attackairf2_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2720,12 +2720,12 @@ list:
       unk_2000: false
     blend_frames: 0
     animations:
-      - name: "0x158537de0d"
+      - name: c05attackairn3.nuanmb
         unk: 0
     scripts:
       - expression_attackairf3
       - sound_attackairf3
-      - effect_attackairf3
+      - effect_attackairf3_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2755,7 +2755,7 @@ list:
     scripts:
       - expression_attackairb
       - sound_attackairb
-      - effect_attackairb
+      - effect_attackairb_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2785,7 +2785,7 @@ list:
     scripts:
       - expression_attackairhi
       - sound_attackairhi
-      - effect_attackairhi
+      - effect_attackairhi_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2815,7 +2815,7 @@ list:
     scripts:
       - expression_attackairlw
       - sound_attackairlw
-      - effect_attackairlw
+      - effect_attackairlw_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3475,7 +3475,7 @@ list:
     scripts:
       - expression_specialsstart
       - sound_specialsstart
-      - effect_specialsstart
+      - effect_specialsstart_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3505,7 +3505,7 @@ list:
     scripts:
       - expression_specials1
       - sound_specials1
-      - effect_specials1
+      - effect_specials1_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3535,7 +3535,7 @@ list:
     scripts:
       - expression_specialssearch
       - sound_specialssearch
-      - effect_specialssearch
+      - effect_specialssearch_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3655,7 +3655,7 @@ list:
     scripts:
       - expression_specials2
       - sound_specials2
-      - effect_specials2
+      - effect_specials2_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3685,7 +3685,7 @@ list:
     scripts:
       - expression_specials3
       - sound_specials3
-      - effect_specials3
+      - effect_specials3_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3745,7 +3745,7 @@ list:
     scripts:
       - expression_specialairsstart
       - sound_specialairsstart
-      - effect_specialairsstart
+      - effect_specialairsstart_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3775,7 +3775,7 @@ list:
     scripts:
       - expression_specialairs1
       - sound_specialairs1
-      - effect_specialairs1
+      - effect_specialairs1_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3805,7 +3805,7 @@ list:
     scripts:
       - expression_specialairssearch
       - sound_specialairssearch
-      - effect_specialairssearch
+      - effect_specialairssearch_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3925,7 +3925,7 @@ list:
     scripts:
       - expression_specialairs2
       - sound_specialairs2
-      - effect_specialairs2
+      - effect_specialairs2_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3955,7 +3955,7 @@ list:
     scripts:
       - expression_specialairs3
       - sound_specialairs3
-      - effect_specialairs3
+      - effect_specialairs3_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -4015,7 +4015,7 @@ list:
     scripts:
       - expression_specialhi
       - sound_specialhi
-      - effect_specialhi
+      - effect_specialhi_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -4045,7 +4045,7 @@ list:
     scripts:
       - expression_specialairhi
       - sound_specialairhi
-      - effect_specialairhi
+      - effect_specialairhi_tr
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -4165,7 +4165,7 @@ list:
     scripts:
       - expression_speciallw
       - sound_speciallw
-      - effect_speciallw
+      - effect_speciallw_tr
     extra:
       xlu_start: 1
       xlu_end: 12
@@ -4285,7 +4285,7 @@ list:
     scripts:
       - expression_specialairlw
       - sound_specialairlw
-      - effect_specialairlw
+      - effect_specialairlw_tr
     extra:
       xlu_start: 1
       xlu_end: 12

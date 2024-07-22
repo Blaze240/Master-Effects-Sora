@@ -70,6 +70,6 @@ unsafe extern "C" fn effect_attacks33(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_attacks33", effect_attacks33, Priority::Low)
+        .effect_acmd("effect_attacks33_tr", effect_attacks33, Priority::Low)
         .install();
 }

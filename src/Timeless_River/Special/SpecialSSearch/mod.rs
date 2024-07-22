@@ -38,7 +38,7 @@ unsafe extern "C" fn effect_specialssearch(agent: &mut L2CAgentBase) {
 pub fn install() {
     Agent::new("trail")
         .effect_acmd(
-            "effect_specialssearch",
+            "effect_specialssearch_tr",
             effect_specialssearch,
             Priority::Low,
         )

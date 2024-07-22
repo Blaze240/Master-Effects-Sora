@@ -66,6 +66,6 @@ unsafe extern "C" fn effect_attackairhi(agent: &mut L2CAgentBase) {
 }
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_attackairhi", effect_attackairhi, Priority::Low)
+        .effect_acmd("effect_attackairhi_tr", effect_attackairhi, Priority::Low)
         .install();
 }
