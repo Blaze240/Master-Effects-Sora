@@ -13,13 +13,11 @@
     clippy::borrow_interior_mutable_const
 )]
 
-mod Aerials;
-mod Grounded_Moves;
+mod Timeless_River;
 
 
-#[skyline::main(name = "cloud_limit_effects")]
+#[skyline::main(name = "trail_master_effects")]
 pub fn main() {
-	Aerials::install();
-	Grounded_Moves::install();
+	Timeless_River::install();
 
 }
