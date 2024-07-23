@@ -14,10 +14,12 @@
 )]
 
 mod Timeless_River;
+mod Ultima_Weapon;
 
 
 #[skyline::main(name = "trail_master_effects")]
 pub fn main() {
 	Timeless_River::install();
+	Ultima_Weapon::install();
 
 }
